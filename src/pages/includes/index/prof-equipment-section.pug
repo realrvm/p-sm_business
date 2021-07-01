@@ -1,0 +1,13 @@
+- const profequipmentList = [{blue: "Для испарителей внутренних блоков ", black: "- Астрадез"}, {blue: "Для труднодоступных мест ", black: "- аэрозольные баллоны с небольшим направляющим носиком. Он помогает дотянуться до самых укромных мест внутреннего блока."}, {blue: "Против вирусов, грибков и бактерий ", black: "- концентрат, чье профильное назначение - обслуживание систем вентиляции, камер орошения и систем кондиционирования воздуха"}]
+
+.profequipment
+    .profequipment__descr
+        p.profequipment__descr-title
+            | Профессиональнальное оборудование
+        p.profequipment__descr-text
+            | В работе использую исключительно профессиональнальное оборудование, а также сертифицированные на территории РФ чистящие и дезинфицирующие средства. Те, что давно на рынке и зарекомендовали себя с наилучшей стороны.
+    .profequipment__list
+        each list in profequipmentList
+            .profequipment__list-item
+                span.profequipment__list-item-blue= list.blue
+                span.profequipment__list-item-black= list.black

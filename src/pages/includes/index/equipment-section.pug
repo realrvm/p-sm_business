@@ -1,0 +1,12 @@
+- const equipmentList = ["мойки высокого давления", "химические средства для дезинфекции", "парогенераторы", "вакуумные насосы", "манометрические станции", "лестницы и стремянки", "любые фреоны для всей холодильной техники представленной в нашем регионе"]
+
+section.equipment
+    .equipment__title
+        .equipment__enum
+            .equipment__info i
+            p.equipment__descr У меня есть всё необходимое оборудование и инструмент для антибактериальной мойки, качественного обслуживания, а также ремонта бытовых сплит-систем:
+        .equipment__img-wrap
+            img.equipment__img(src="./assets/img/content/equipment.webp" alt="")
+    .equipment__list
+        for item in equipmentList
+            .equipment__list-item.--svg__check-before= item

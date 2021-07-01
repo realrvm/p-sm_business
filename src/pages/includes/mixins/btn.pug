@@ -1,0 +1,2 @@
+mixin btn({add_class ,number="+123456789", content="Позвонить"}= {})
+    a.call__link(href=`tel:${number}`)&attributes({"class":add_class})= content

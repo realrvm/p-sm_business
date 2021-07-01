@@ -1,0 +1,9 @@
+- const prices = [{name: "Антибактериальная промывка внутреннего блока ", price: "1500 -2000 руб.", img: "price1"}, { name: "Промывка наружного блока мойкой высокого давления", price: "1000 руб.", img: "price2"}, {name: "Дозаправка сплит системы (до 200г)", price: "1500 руб.", img: "price3"}, {name: "Заправка пустой сплит системы с вакуумированием ", price: "3500 руб.", img: "price4"}, {name: "Озонирование 1 комнаты до 20кв.м ", price: "900 руб.", img: "price5"}]
+
+.price
+    h3.price__title Стоимость моих услуг для бытовых сплит систем до 35 м<sup><small>2</small></sup>
+    .price__cards
+        each price in prices
+            .price__card(style=`background-image: url(./assets/img/content/${price.img}.webp)`)
+                h4.price__card-name= price.name
+                h3.price__card-number= price.price

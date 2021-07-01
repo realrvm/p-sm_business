@@ -1,0 +1,10 @@
+footer.footer
+    a.navbar__logo.--svg__logo(href="")
+    .footer__right
+        .navbar__socials
+            each social in navbarSocials
+                .navbar__socials-item
+                    a.navbar__socials-link(href=social.link)
+                        span.navbar__socials-name=social.name
+                        .navbar__socials-img(class=`--svg__${social.icon}`)
+        h3.footer__tel 8-123-456-78-90

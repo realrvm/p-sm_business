@@ -1,0 +1,8 @@
+.myjob
+    .myjob__top
+        h3.myjob__top-title Мои работы
+        a.myjob__top-insta.--svg__instagram-before(href="https://www.instagram.com") Больше фото в инстаграм
+    .myjob__slider
+        - let n = 1
+            while n < 5
+                img.myjob__slider-img(src=`./assets/img/content/slider${n++}.webp` alt="")

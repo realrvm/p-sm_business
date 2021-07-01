@@ -1,0 +1,19 @@
+// Mobile first
+$mediaWidthMobile: 320px;
+$mediaWidthTablet: 768px;
+$mediaWidthDesktop: 1024px;
+
+$colors: (
+    "black": #000000,
+    "white": #ffffff,
+    "blue": #226ce0,
+    "red": #be2e21,
+    "light_blue": #2196f3,
+    "grey": #828282,
+);
+
+:root {
+    @each $key, $value in $colors {
+        --color-#{$key}: #{$value};
+    }
+}

@@ -1,0 +1,130 @@
+.delivery {
+    background-image: url("./assets/img/delivery-bg.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 60px 0;
+
+    @include media-desktop {
+        padding: 0;
+    }
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        @include container;
+
+        @include media-desktop {
+            flex-direction: row;
+        }
+    }
+
+    &__inner {
+        flex: 1;
+    }
+
+    &__car {
+        display: none;
+        flex: 1;
+
+        @include media-desktop {
+            display: block;
+        }
+    }
+
+    &__call {
+        display: flex;
+        flex-direction: column;
+
+        &-btn {
+            margin-left: 25px;
+        }
+
+        &-tel {
+            display: flex;
+            align-items: center;
+            margin-bottom: 14px;
+            flex-direction: column;
+
+            &-number {
+                font-weight: 700;
+                font-size: 24px;
+                color: var(--color-blue);
+
+                @include media-tablet {
+                    font-size: 30px;
+                    line-height: 131%;
+                }
+            }
+
+            @include media-tablet {
+                flex-direction: row;
+            }
+        }
+
+        &-time {
+            margin-bottom: 42px;
+            position: relative;
+            padding-left: 45px;
+            font-size: 14px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 18px;
+                height: 18px;
+                @include bg;
+            }
+
+            span {
+                font-weight: 700;
+            }
+
+            @include media-tablet {
+                margin-bottom: 84px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__cities {
+        &-title {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 131.69%;
+            margin-bottom: 14px;
+        }
+
+        &-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__city {
+        display: flex;
+        align-items: center;
+        margin-bottom: 14px;
+
+        &-strangebluecercle {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: var(--color-blue);
+            margin-right: 5px;
+        }
+
+        &-name {
+            font-size: 14px;
+            margin-right: 10px;
+
+            @include media-tablet {
+                font-size: 18px;
+            }
+        }
+    }
+}

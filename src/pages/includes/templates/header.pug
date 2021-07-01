@@ -1,0 +1,22 @@
+include ../mixins/btn
+
+- const navbarSocials=[{name: "Мой инстаграм", icon: "instagram", link: "https://instagram.com"}, {name: "Написать в WhatsApp" , icon: "whatsapp", link: "https://wa.me/79200000000"}]
+
+header.header
+    .header__inner
+        nav.navbar
+            a.navbar__logo.--svg__logo(href="")
+            .navbar__socials
+                each social in navbarSocials
+                    .navbar__socials-item
+                        a.navbar__socials-link(href=social.link)
+                            span.navbar__socials-name=social.name
+                            .navbar__socials-img(class=`--svg__${social.icon}`)
+        .header__content
+            .header__content-descr
+                span.header__content-descr-delivery.--svg__truck-before Выезд в день обращения
+                h2.header__content-descr-title Антибактериальная чистка и ремонт сплитсистем по КМВ
+                .header__content-descr-tel
+                    h3.header__content-descr-tel-number 8-123-456-78-90
+                    +btn({add_class: "call-button"})
+            img.header__content-img(src="./assets/img/woman.webp" alt="")

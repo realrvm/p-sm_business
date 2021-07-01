@@ -1,0 +1,15 @@
+include ../mixins/btn
+
+.condensat
+    .condensat__flex
+        .condensat__top
+            .condensat__top-descr
+                .condensat__top-descr-cond-img.--svg__air
+                p
+                    | Друзья, все это я рассказал вам для того, чтобы вы понимали - после меня вам в прямом и переносном смысле станет легче дышать.
+                p
+                    | <span>Работаю с 2010 годa</span> и за все время ни разу не менял номер телефона. Все клиенты могут дозвониться мне в любое время. Это - моя гарантия качества.
+                h3.condensat__top-descr-number 8-123-456-78-90
+                +btn({add_class: "call-button"})
+            .condensat__top-img
+                img(src="./assets/img/condensat.webp" alt="")

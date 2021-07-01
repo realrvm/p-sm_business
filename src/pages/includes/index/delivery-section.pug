@@ -1,0 +1,20 @@
+include ../mixins/btn
+- const cities = ["Минеральные Воды", "Железноводск", "Иноземцево", "Пятигорск"]
+
+.delivery
+    .delivery__flex
+        .delivery__inner
+            .delivery__call
+                .delivery__call-tel
+                    h3.delivery__call-tel-number 8-123-456-78-90
+                    +btn({add_class: "delivery__call-btn"})
+                p.delivery__call-time.--svg__clock-before Прием заявок<span> с 8.00 до 20.00</span>
+            .delivery__cities
+                h4.delivery__cities-title Осуществляю выезд  по городам КавМинВод:
+                .delivery__cities-list
+                    for city in cities
+                        .delivery__city
+                            .delivery__city-strangebluecercle
+                            span.delivery__city-name= city
+        .delivery__car
+            img(src="./assets/img/delivery.webp" alt="")

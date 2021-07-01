@@ -1,0 +1,97 @@
+.equipment {
+    @include container;
+
+    &__title {
+        background: var(--color-blue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 30px;
+        margin-bottom: 20px;
+
+        @include media-tablet {
+            padding: 50px 70px;
+            justify-content: space-between;
+            background: linear-gradient(90deg, var(--color-blue) 70%, #e5e5e5 30%);
+            margin-bottom: 40px;
+        }
+    }
+
+    &__info {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: var(--color-white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 23px;
+
+        @include media-tablet {
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    &__descr {
+        color: var(--color-white);
+        line-height: 152%;
+        max-width: 535px;
+        text-align: center;
+
+        @include media-tablet {
+            font-size: 21px;
+            line-height: 182%;
+            text-align: left;
+            margin-right: 20px;
+        }
+    }
+
+    &__img-wrap {
+        display: none;
+
+        @include media-tablet {
+            display: flex;
+        }
+    }
+
+    &__img {
+        object-fit: cover;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0 50px;
+        margin-bottom: 30px;
+
+        @include media-tablet {
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 100px;
+        }
+
+        &-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            position: relative ;
+            padding-left: 25px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                left: 0;
+                top: 7px;
+                @include bg;
+            }
+
+
+            @include media-tablet {
+                font-size: 22px;
+                font-weight: 500;
+            }
+        }
+    }
+}

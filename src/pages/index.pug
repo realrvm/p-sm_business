@@ -1,0 +1,23 @@
+extends common/layout
+
+block vars
+  -const pageTitle="Main page"
+
+block content
+    .wrapper.flex.--dir-col
+        include includes/templates/header
+        .main
+            include includes/index/greeting-section
+            include includes/index/equipment-section
+            include includes/index/advantages-section
+            include includes/index/prof-equipment-section
+            include includes/index/condensat-section
+            include includes/index/condensat-bottom-section
+            include includes/index/jobs-section
+            include includes/index/warning-section
+            include includes/index/before-after-section
+            include includes/index/myjob-section
+            include includes/index/faq-section
+            include includes/index/price-section
+            include includes/index/delivery-section
+        include includes/templates/footer

@@ -1,0 +1,88 @@
+.profequipment {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    padding: 0 20px;
+
+    @include media-desktop {
+      flex-direction: row;
+      margin-bottom: 100px;
+    }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 40px;
+
+    &-title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 120%;
+      margin-bottom: 25px;
+      text-align: center;
+
+      @include media-tablet {
+        font-size: 35px;
+        line-height: 131%;
+        margin-bottom: 51px;
+      }
+
+      @include media-desktop {
+        text-align: left;
+      }
+    }
+
+    &-text {
+      line-height: 133%;
+      font-size: 14px;
+      text-align: center;
+      padding: 0 20px;
+
+      @include media-tablet {
+        line-height: 183%;
+        font-size: 18px;
+        padding: 0;
+      }
+
+      @include media-desktop {
+        text-align: left;
+        margin-bottom: 0;
+      }
+    }
+
+    @include media-desktop {
+      margin-right: 80px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background: var(--color-white);
+    padding: 33px 39px 18px;
+    font-size: 14px;
+    line-height: 133%;
+
+    &-item-blue {
+      color: var(--color-blue);
+    }
+
+    &-item {
+      margin-bottom: 16px;
+
+      @include media-tablet {
+        margin-bottom: 32px;
+      }
+    }
+
+    @include media-tablet {
+      font-size: 18px;
+      line-height: 183%;
+      padding: 67px 78px 35px;
+    }
+  }
+}
